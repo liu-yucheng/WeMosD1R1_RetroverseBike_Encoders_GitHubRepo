@@ -72,7 +72,7 @@ unsigned int const __WiFi_IP_Prefix_Sections_Count__ = 4;
 
 // (!) Check bike subnet prefix 192.168.31.* .
 int const __WiFi_IP_Prefix_Sections__[__WiFi_IP_Prefix_Sections_Count__] = {
-  172, 23, 244, 0
+  192, 168, 31, 0
 };
 
 // (!)
@@ -84,7 +84,7 @@ IPAddress const __WiFi_Local_IP__(
   __WiFi_IP_Prefix_Sections__[0],
   __WiFi_IP_Prefix_Sections__[1],
   __WiFi_IP_Prefix_Sections__[2],
-  186
+  100
 );
 
 // (!) Check router IP, default: 192.168.31.1 .
@@ -96,15 +96,15 @@ IPAddress const __WiFi_Local_Gateway__(
 );
 
 // (!) Check router subnet, default: 255.255.255.0 .
-IPAddress const __WiFi_Local_Subnet__(255, 255, 254, 0);
+IPAddress const __WiFi_Local_Subnet__(255, 255, 255, 0);
 
 // (!) Fill in WiFi SSID "Retroverse-Bike_****"
 //   where "****" is a 4 digit pseudo random hex.
-char const __WiFi_Config_SSID__[] = "Staff"; 
+char const __WiFi_Config_SSID__[] = "SSID"; 
 
 // (!) Fill in WiFi password "0000****"
 //   where "****" is a 4 digit pseudo random hex.
-char const __WiFi_Config_Password__[] = "88886666";
+char const __WiFi_Config_Password__[] = "Password@0";
 
 // (!)
 // unsigned int const __UDP_Local_Port__ = 50010;
@@ -114,8 +114,8 @@ int const __UDP_Local_Port__ = 50010;
 IPAddress const __UDP_Remote_IP__(
   __WiFi_IP_Prefix_Sections__[0],
   __WiFi_IP_Prefix_Sections__[1],
-  102, // __WiFi_IP_Prefix_Sections__[2],
-  6
+  31, // __WiFi_IP_Prefix_Sections__[2],
+  240
 );
 
 // (!)
